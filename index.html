@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Interactive Pins on ArcGIS Map - Piraeus, Greece</title>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.23/"></script>
+
+    <script>
+      require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/Graphic",
+        "esri/geometry/Point",
+        "esri/PopupTemplate",
+      ], function (Map, MapView, Graphic, Point, PopupTemplate) {
+        var map = new Map({
+          basemap: "topo-vector",
+        });
+
+        var view = new MapView({
+          container: "viewDiv",
+          map: map,
+          center: [23.6386, 37.9442], // Longitude, latitude
+          zoom: 14,
+        });
+
+        view.when(function () {
+          // First pin (Sharks)
+          var pinPoint1 = new Point({
+            longitude: 23.6386,
+            latitude: 37.9442,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Warning",
+            content: "Here are sharks, beware!",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);
+          //
+
+        ///
+        var pinPoint2 = new Point({
+            longitude: 23.646827622539696,
+            latitude: 37.943392505087076,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "yellow",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "THEATRE",
+            content: "This is where Dimotiko Theatro of Piraeus is",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+         
+        ///
+
+        ////
+        var pinPoint2 = new Point({
+            longitude: 23.644971580143135,
+            latitude:  37.942831940720474,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "COLLEGE AKMI",
+            content: "This is IEK AKMI OF PIRAEUS",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+        ////
+
+      /////
+   var pinPoint2 = new Point({
+            longitude: 23.64420060880806,
+            latitude: 37.937301836782325  ,    
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "grey",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "MUSEUM PIRAEUS",
+            content: "This is the Museum of Piraeus.Museum with local history exhibits, bronze statues, prehistoric artefacts and sculptures.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+      /////
+     
+      //////
+      var pinPoint2 = new Point({
+            longitude: 23.653075380004708,
+            latitude: 37.94276412097054,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "orange",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "UNIVERSITY PAPI",
+            content: "The University of Piraeus aka (PAPI) is a Higher Educational Institution based in Piraeus at the intersection of Karaoli & Dimitriou and Deligiorgi streets.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+      //////
+///////
+var pinPoint2 = new Point({
+            longitude: 23.645684330796154,
+            latitude:  37.935019613273745,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "red",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Janeio General Hospital, Piraeus",
+            content: "It was founded following a donation by the merchant NIKITA TZANNI or TZANNE from Kythira, Municipality of Piraeus.The foundation stone was laid in 1864.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+///////
+
+////////
+var pinPoint2 = new Point({
+            longitude: 23.64349940837538,
+            latitude:  37.930678844184975,    
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "aqua",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Metaxa Cancer Hospital Piraeus",
+            content: "From the beginning, great emphasis was placed on the diagnostic Departments. A large Department of Cytology, Pathological Anatomy and Radioisotopes was created with a special direction.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+////////
+
+/////////
+var pinPoint2 = new Point({
+            longitude: 23.642971143897903,
+            latitude:  37.9298106409912,    
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "brown",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Ναός Αγίου Βασιλείου",
+           
+            content: " Saint Basil's Church:The history of our Holy Church begins about a century ago when, at their own expense, the blessed Vasilios & Aikaterini Georgakakou built a small church on a plot of land granted to them by Panagis Skambas for this purpose. The foundation of the first small Holy Church began on January 10, 1874 and was officially inaugurated on August 31, 1875. The Holy Church functioned with a Russian cleric archimandrite until the beginning of the 20th century.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+/////////
+//////////
+var pinPoint2 = new Point({
+            longitude: 23.6395746316092,
+            latitude:     37.9275119873511,  
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "green",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Ανοιχτό Γήπεδο Μπάσκετ - Α.Ο.Φ. Πορφύρα",
+           
+            content: " Open Basketball Court - A.O.F. Purple:The Sports Club of Freattyda Porphyra is a Greek sports association that operates in the area of ​​Freattyda, in Piraeus, where the headquarters of its departments are located. Its official year of establishment is 1957 and it competes in red and black colors.It takes its name from the poet Lampros Porphyra, a prominent figure of the region.It maintains active football, basketball and volleyball sections for male and female athletes of all age groups, and in the past also had a swimming section.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+//////////
+
+///////////
+var pinPoint2 = new Point({
+            longitude:  23.62796848171385,
+            latitude:   37.93463543502015,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "grey",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Σχολή Ναυτικών Δοκίμων",
+           
+            content: "Hellenic Naval Academy:The School of Naval Cadets (S.N.D.) is a Higher Military Educational Institution (ASEI), equal to a University, which is organized and operates in accordance with its organization, providing equal education and granting degrees equal to the institutions of the university sector of higher education.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+///////////
+
+////////////
+var pinPoint2 = new Point({
+            longitude:  23.6272103659885,
+            latitude:  37.932278455856924,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "aqua",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Μικρή Παραλία Πειραικής",
+           
+            content: "Small Beach of Piraeus:Piraiki is the Southwest coastal district of Piraeus, it is located east of the central port of Piraeus.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+////////////
+
+/////////////
+
+var pinPoint2 = new Point({
+            longitude:  23.640159003143303,
+            latitude:    37.93856520680822,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "brown",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Ναός Αγίου Νικολάου",
+           
+            content: "Church of Agios Nikolaos:The Holy Church of Agios Nikolaos is an Orthodox church in Syros and the patron saint of the capital Ermoupoli. It is located in the Vaporia district, close to Miaouli Square and the Apollo Theater and is considered one of the most important attractions of the island.It is the third oldest Holy Church of Hermoupolis, after the Holy Metropolitan Church of the Transfiguration (1824) and the Holy Church of the Dormition of the Virgin (1828).",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+/////////////
+
+//////////////
+var pinPoint2 = new Point({
+            longitude:  23.642795840243082,
+            latitude:   37.942583499355806,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Πύλη Ε9",
+           
+            content: "Port Gate E9",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+//////////////
+
+///////////////
+var pinPoint2 = new Point({
+            longitude:  23.66286891591961,
+            latitude:     37.94154006178471,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "gold",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Θέατρο Δελφινάριο",
+           
+            content: "Theater Delfinario:You can watch plays of the comedian Markos Seferlis and his crew and have a enjoyble time",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+///////////////
+
+///////////////
+var pinPoint2 = new Point({
+            longitude:  23.65885321957168,
+            latitude:    37.93763122430132,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "red",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Μικρολίμανο",
+           
+            content: "Mikrolimano:Mikrolimano or Fanari or port of Koumundourou, formerly Turkolimano and in ancient times Port of Munich, is today a tourist location and is included in the wider district of Kastella. It is located in the northeast of the Piraeus peninsula, bordering the district of Neos Faliros. Today, because of the cafes and night entertainment centers, it has given impetus to the intensification of night entertainment.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+///////////////
+
+///////////////
+var pinPoint2 = new Point({
+            longitude:  23.634847099213424,
+            latitude:    37.93281929658236,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "green",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Αποσπερίτης Μαερειό Πειραιάς",
+           
+            content: "Aposperitis Maereio Piraeus:Fine cuisine restaurant.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+
+///////////////
+
+////////////////
+var pinPoint2 = new Point({
+            longitude:  23.636887596785318,
+            latitude:  37.93654438318568,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "purple",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Alpha Bank",
+           
+            content: "Abn Amro Bank.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+////////////////
+
+/////////////////
+var pinPoint2 = new Point({
+            longitude:  23.633637240676062,
+            latitude:   37.92699336562128,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "lime",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Ψαρόσκαλα Πειραϊκής",
+           
+            content: "Psaroskala Piraiki Piraeus Tavern:A good tavern with view the sea and good sea food for you and your family",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+/////////////////
+
+//////////////////
+var pinPoint2 = new Point({
+            longitude:  23.647729636687476,
+            latitude:    37.93072740424553,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "tomato",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Παραλία Φρεατυδα",
+           
+            content: "Beach Freatida",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+//////////////////
+
+          // Second pin (AKMI AVT)
+          var pinPoint2 = new Point({
+            longitude: 23.6563,
+            latitude: 37.9597,
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "red",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "My Location",
+            content: "That's where I am now!",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+         
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
